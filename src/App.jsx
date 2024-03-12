@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Hero from './components/Hero';
 import Footer from './components/Footer';
 import FetchData from './components/FetchData';
 
