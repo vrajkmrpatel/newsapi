@@ -10,8 +10,8 @@ const FetchData = ({ cat }) => {
         await axios
             .get(
                 cat
-                    ? `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=4fc1e250b8344cf19998fc20578896dd`
-                    : "https://newsapi.org/v2/top-headlines?country=in&apiKey=4fc1e250b8344cf19998fc20578896dd"
+                    ? `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=en&country=in&max=10&apikey=ff46992c1f613cb6dac59d0efb664bbc`
+                    : "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&max=10&apikey=ff46992c1f613cb6dac59d0efb664bbc"
             ).then((res) => {
                 setData(res.data.articles);
             });
@@ -32,7 +32,7 @@ const FetchData = ({ cat }) => {
                         <div className='container m-2 p-3 w-[600px] shadow-lg bg-white rounded-lg'>
                             <h5 className='font-semibold text-lg md:text-xl my-2'>{items.title}</h5>
                             <div className='flex justify-center items-center'>
-                                <img src={items.urlToImage} alt="img not found" className='container w-full h-[300px] object-cover rounded-md ' />
+                                <img src={items.image} alt="img not found" className='container w-full h-[300px] object-cover rounded-md ' />
                             </div>
                             <p className='text-xs md:text-sm my-1'>{items.content}</p>
                             <a href={items.url} target='_blank' className='text-blue-500 text-sm underline'>View More</a>
