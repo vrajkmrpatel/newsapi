@@ -1,36 +1,48 @@
 // Navbar.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false);
+
+
   return (
-    <header className=" bg-gray-800 p-5 text-white">
+    <header className="shadow-md  bg- p-5 bg-white top-0 left-0">
 
       {/*dekstop view*/}
       <div className="mx-2 md:flex md:items-center md:justify-between">
-        <Link to="/" className="text-xl md:text-2xl font-bold">News Hub</Link>
+        <Link to="/" className="text-2xl md:text-3xl font-bold">News Hub</Link>
 
 
-        <ul className='md:flex md:items-center gap-3'>
+        <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
+          <ion-icon name={open ? 'close-outline' : 'menu-outline'}></ion-icon>
+        </div>
+
+        <ul className={`md:flex md:items-center gap-3 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 pl-9 text-black 
+        ${open ? 'top-20 opacity-100' : 'top-[-420px]'} md:opacity-100`}>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/">Home</Link></li>
+            <Link className='hover:text-indigo-600' to="/">Home</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/health">Health</Link></li>
+            <Link className='hover:text-indigo-600'  to="/health">Health</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/business">Business</Link></li>
+            <Link className='hover:text-indigo-600'  to="/business">Business</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/technology">Technology</Link></li>
+            <Link className='hover:text-indigo-600'  to="/technology">Technology</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/entertainment">Entertainment</Link></li>
+            <Link className='hover:text-indigo-600'  to="/entertainment">Entertainment</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/sports">Sports</Link></li>
+            <Link className='hover:text-indigo-600'  to="/sports">Sports</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link to="/science">Science</Link></li>
-        </ul>
+            <Link className='hover:text-indigo-600'  to="/science">Science</Link></li>
+        
 
         {/*Implement talwind Dark Mode and github link like react websites...*/}
-        <button className='text-white'><Link to={'https://github.com/vrajkmrpatel/newsapi'}>Github</Link></button>
-      </div>
+        
+          <button className='bg-indigo-600 text-white py-2 px-6 rounded  hover:bg-indigo-400 duration-500' ><Link to={'https://github.com/vrajkmrpatel/newsapi'}>Github</Link></button>
+        </ul>
+        </div>
     </header>
   );
 };
