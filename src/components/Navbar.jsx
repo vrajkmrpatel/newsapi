@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="shadow-md  bg- p-5 bg-white top-0 left-0">
+    <header className="shadow-md p-5 bg-white top-0 left-0 sticky">
 
       {/*dekstop view*/}
       <div className="mx-2 md:flex md:items-center md:justify-between">
@@ -20,8 +20,8 @@ const Navbar = () => {
           <ion-icon name={open ? 'close-outline' : 'menu-outline'}></ion-icon>
         </div>
 
-        <ul className={`md:flex md:items-center gap-3 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 pl-9 text-black 
-        ${open ? 'top-20 opacity-100' : 'top-[-420px]'} md:opacity-100`}>
+        <ul className={`md:flex text-center md:items-center gap-3 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 text-black 
+        ${open ? 'top-20 opacity-100' : 'top-[-420px]'} md:opacity-100 `}>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
             <Link className='hover:text-indigo-600' to="/">Home</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
         {/*Implement talwind Dark Mode and github link like react websites...*/}
         
-          <button className='bg-indigo-600 text-white py-2 px-6 rounded  hover:bg-indigo-400 duration-500' ><Link to={'https://github.com/vrajkmrpatel/newsapi'}>Github</Link></button>
+          <button className='bg-indigo-600 text-white py-2 px-6 m-2 rounded  hover:bg-indigo-400 duration-500' ><Link to={'https://github.com/vrajkmrpatel/newsapi'}>Github</Link></button>
         </ul>
         </div>
     </header>
