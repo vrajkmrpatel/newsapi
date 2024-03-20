@@ -23,24 +23,31 @@ const Navbar = () => {
         <ul className={`md:flex text-center md:items-center gap-3 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 text-black 
         ${open ? 'top-20 opacity-100' : 'top-[-420px]'} md:opacity-100 `}>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600' to="/">Home</Link></li>
+            <Link className='hover:text-indigo-600' to="/"
+            onClick={() => setOpen(false)}>Home</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600'  to="/health">Health</Link></li>
+            <Link className='hover:text-indigo-600'  to="/health"
+            onClick={() => setOpen(false)}>Health</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600'  to="/business">Business</Link></li>
+            <Link className='hover:text-indigo-600'  to="/business"
+            onClick={() => setOpen(false)}>Business</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600'  to="/technology">Technology</Link></li>
+            <Link className='hover:text-indigo-600'  to="/technology"
+            onClick={() => setOpen(false)}>Technology</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600'  to="/entertainment">Entertainment</Link></li>
+            <Link className='hover:text-indigo-600'  to="/entertainment"
+            onClick={() => setOpen(false)}>Entertainment</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600'  to="/sports">Sports</Link></li>
+            <Link className='hover:text-indigo-600'  to="/sports"
+            onClick={() => setOpen(false)}>Sports</Link></li>
           <li className='mx-2 my-3 md:my-0 font-semibold cursor-pointer'>
-            <Link className='hover:text-indigo-600'  to="/science">Science</Link></li>
+            <Link className='hover:text-indigo-600'  to="/science"
+            onClick={() => setOpen(false)}>Science</Link></li>
         
 
         {/*Implement talwind Dark Mode and github link like react websites...*/}
         
-          <button className='bg-indigo-600 text-white py-2 px-6 m-2 rounded  hover:bg-indigo-400 duration-500' ><Link to={'https://github.com/vrajkmrpatel/newsapi'}>Github</Link></button>
+          <button className='bg-gray-900 text-white py-2 px-6 m-2 rounded  hover:bg-indigo-400 duration-500' ><Link to={'https://github.com/vrajkmrpatel/newsapi'}>Github</Link></button>
         </ul>
         </div>
     </header>
