@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="shadow-md p-5 bg-white top-0 left-0 sticky">
+    <header className="shadow-md p-5 md:p-3 bg-white top-0 left-0 sticky">
 
       {/*dekstop view*/}
       <div className="mx-2 md:flex md:items-center md:justify-between">
