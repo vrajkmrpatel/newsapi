@@ -6,12 +6,14 @@ const FetchData = ({ cat }) => {
 
     const [Data, setData] = useState(null);
 
+    const API_KEY = process.env.REACT_APP_NEWS_API_KEY
+
     const fetchData = async () => {
         await axios
             .get(
                 cat
-                    ? `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=en&country=in&max=10&apikey=ff46992c1f613cb6dac59d0efb664bbc`
-                    : "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&max=10&apikey=ff46992c1f613cb6dac59d0efb664bbc"
+                    ? `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=en&country=in&max=10&apikey=${API_KEY}`
+                    : `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&max=10&apikey=${API_KEY}`
             ).then((res) => {
                 setData(res.data.articles);
             });
