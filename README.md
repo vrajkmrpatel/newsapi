@@ -10,11 +10,9 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://res.cloudinary.com/dc2b3ji7m/image/upload/v1711299278/newsAPI/news-app-1.png" alt="project-screenshot" width="500" height="500/">
+<img src="https://res.cloudinary.com/dc2b3ji7m/image/upload/v1711299278/newsAPI/news-app-1.png" alt="project-screenshot" width="400" height="300/">
 
-<img src="https://res.cloudinary.com/dc2b3ji7m/image/upload/v1711299279/newsAPI/news-app-2.png" alt="project-screenshot" width="500" height="500/">
-
-<img src="" alt="project-screenshot" width="400" height="400/">
+<img src="https://res.cloudinary.com/dc2b3ji7m/image/upload/v1711299279/newsAPI/news-app-2.png" alt="project-screenshot" width="400" height="300/">
 
 <h2>🛠️ Installation Steps:</h2>
 
